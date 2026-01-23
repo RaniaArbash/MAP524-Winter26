@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Week2</string>
+    <string name="collegename">Seneca College!</string>
+    <string name="semestername">Winter 2026</string>
+    <string name="log_in">Log In</string>
+
+</resources>
