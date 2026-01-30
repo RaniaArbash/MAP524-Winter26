@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Week3</string>
+    <string name="seneca_college">Seneca College!</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_program">Enter Your Program</string>
+    <string name="log_in">Log In</string>
+
+    <string-array name="colleges">
+        <item>Seneca College</item>
+        <item>Humber College</item>
+        <item>Centennial College</item>
+    </string-array>
+</resources>
