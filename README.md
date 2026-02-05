@@ -7,18 +7,19 @@ This repository contains Android Studio projects used during the course to demon
 
 ## Course Overview
 
-This repository currently includes two projects, each aligned with a specific week of the course:
+This repository currently includes projects aligned with specific weeks of the course:
 
 | Week | Topic |
 |-----|------|
 | Week 1 | Android Basics and Android Studio Introduction |
 | Week 2 | Android Layouts and Resources |
+| Week 3 | Adapters and List-Based Views |
 
 ---
 
 ## Projects
 
-### Week 1 — Android Fundamentals
+## Week 1 — Android Fundamentals
 
 This project introduces the basics of Android development and Android Studio.
 
@@ -35,13 +36,11 @@ Official documentation:
 
 ---
 
-### Week 2 — Android Layouts and Resources
+## Week 2 — Android Layouts and Resources
 
 This project focuses on building user interfaces and working with Android resources.
 
----
-
-## Layouts Covered
+### Layouts Covered
 
 - LinearLayout  
   https://developer.android.com/develop/ui/views/layout/linear
@@ -55,9 +54,7 @@ This project focuses on building user interfaces and working with Android resour
 - Declaring layouts in XML  
   https://developer.android.com/develop/ui/views/layout/declaring-layout
 
----
-
-## Android Resources
+### Android Resources
 
 Topics covered:
 - String resources
@@ -70,6 +67,32 @@ Official documentation:
 
 - Supporting multiple languages  
   https://developer.android.com/training/basics/supporting-devices/languages
+
+---
+
+## Week 3 — Adapters and List-Based Views
+
+This project introduces list-based UI components in Android and explains how data is connected to views using adapters. Students learn how to display collections of data efficiently and customize how each item appears on the screen.
+
+Topics covered:
+- Adapter concept in Android
+- ListView basics
+- ArrayAdapter usage
+- BaseAdapter for custom list items
+- View recycling and performance basics
+
+Official documentation and resources:
+- ListView overview  
+  https://developer.android.com/reference/android/widget/ListView
+
+- ArrayAdapter  
+  https://developer.android.com/reference/android/widget/ArrayAdapter
+
+- BaseAdapter  
+  https://developer.android.com/reference/android/widget/BaseAdapter
+
+- Adapters and AdapterViews  
+  https://developer.android.com/reference/android/widget/Adapter
 
 ---
 
