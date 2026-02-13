@@ -16,6 +16,7 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 3 | Adapters and List-Based Views |
 | Week 4 | Intents and Activity Lifecycle |
 | Week 5 | RecyclerView and Interface Listeners (ToDo List App) |
+| <span style="color:red;"><strong>Week 6</strong></span> | <span style="color:red;"><strong>MIDTERM TEST</strong></span> |
 
 ---
 
