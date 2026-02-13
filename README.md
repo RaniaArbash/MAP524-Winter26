@@ -15,6 +15,7 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 2 | Android Layouts and Resources |
 | Week 3 | Adapters and List-Based Views |
 | Week 4 | Intents and Activity Lifecycle |
+| Week 5 | RecyclerView and Interface Listeners (ToDo List App) |
 
 ---
 
@@ -153,6 +154,55 @@ Topics covered:
 Official documentation:
 - Camera via intent  
   https://developer.android.com/training/camera/photobasics
+
+---
+
+## Week 5 — RecyclerView and Interface Listeners  
+### Project: ToDo List Application
+
+In this week, students built a complete **ToDo List application** using RecyclerView. The project demonstrates how to efficiently display dynamic lists and handle user interactions using interface listeners.
+
+### RecyclerView
+
+Students learned how RecyclerView improves performance and flexibility compared to ListView.
+
+Topics covered:
+- RecyclerView setup
+- LayoutManager (LinearLayoutManager)
+- Creating a custom RecyclerView Adapter
+- ViewHolder pattern
+- Binding data to views
+- View recycling mechanism
+
+Official documentation:
+- RecyclerView overview  
+  https://developer.android.com/guide/topics/ui/layout/recyclerview
+
+- RecyclerView.Adapter  
+  https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter
+
+---
+
+### Interface Listeners in Android
+
+Students implemented custom interface listeners to communicate from the Adapter back to the Activity.
+
+Topics covered:
+- Creating a custom interface
+- Implementing the interface in Activity
+- Passing listener to Adapter
+- Handling item click events
+- Clean separation between UI and logic
+
+---
+
+### ToDo List Features Implemented
+
+- Display list of tasks
+- Add new tasks
+- Handle item click events
+- Dynamic UI updates
+- Structured adapter-based architecture
 
 ---
 
