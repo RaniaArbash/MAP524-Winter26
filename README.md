@@ -1,7 +1,7 @@
 # Android Course Repository
 
 Welcome to the Android Course GitHub repository.  
-This repository contains Android Studio projects used during the course to demonstrate core Android development concepts.
+This repository contains Android Studio projects used during the course to demonstrate core Android development concepts, starting from the traditional View system (Java + XML) and transitioning to modern Android development with Jetpack Compose.
 
 ---
 
@@ -16,11 +16,14 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 3 | Adapters and List-Based Views |
 | Week 4 | Intents and Activity Lifecycle |
 | Week 5 | RecyclerView and Interface Listeners (ToDo List App) |
-| <span style="color:red;"><strong>Week 6</strong></span> | <span style="color:red;"><strong>MIDTERM TEST</strong></span> |
+| Week 6 | MIDTERM TEST |
+| <span style="color:red;"><strong>Week 7</strong></span> | <span style="color:red;"><strong>Introduction to Jetpack Compose (Declarative UI)</strong></span> |
 
 ---
 
-## Projects
+# Projects
+
+---
 
 ## Week 1 — Android Fundamentals
 
@@ -41,7 +44,7 @@ Official documentation:
 
 ## Week 2 — Android Layouts and Resources
 
-This project focuses on building user interfaces and working with Android resources.
+This project focuses on building user interfaces and working with Android resources using the traditional View system.
 
 ### Layouts Covered
 
@@ -101,7 +104,7 @@ Official documentation and resources:
 
 ## Week 4 — Intents and Activity Lifecycle
 
-This project focuses on navigation between activities, communication using intents, and understanding how Android manages activity states. It also introduces common system intents and camera integration.
+This project focuses on navigation between activities, communication using intents, and understanding how Android manages activity states.
 
 ### Intents in Android
 
@@ -130,20 +133,6 @@ Official documentation:
 
 ---
 
-### Common Intents
-
-Examples covered:
-- Open browser (ACTION_VIEW)
-- Dial a phone number
-- Send email
-- Share text
-
-Official documentation:
-- Common intents  
-  https://developer.android.com/guide/components/intents-common
-
----
-
 ### Camera and Media Capture
 
 Topics covered:
@@ -161,19 +150,15 @@ Official documentation:
 ## Week 5 — RecyclerView and Interface Listeners  
 ### Project: ToDo List Application
 
-In this week, students built a complete **ToDo List application** using RecyclerView. The project demonstrates how to efficiently display dynamic lists and handle user interactions using interface listeners.
-
-### RecyclerView
-
-Students learned how RecyclerView improves performance and flexibility compared to ListView.
+Students built a complete ToDo List application using RecyclerView.
 
 Topics covered:
 - RecyclerView setup
 - LayoutManager (LinearLayoutManager)
-- Creating a custom RecyclerView Adapter
+- Custom Adapter
 - ViewHolder pattern
-- Binding data to views
-- View recycling mechanism
+- Interface listeners for item click handling
+- Dynamic UI updates
 
 Official documentation:
 - RecyclerView overview  
@@ -184,31 +169,89 @@ Official documentation:
 
 ---
 
-### Interface Listeners in Android
+# Week 7 — Introduction to Jetpack Compose (Modern Android UI)
 
-Students implemented custom interface listeners to communicate from the Adapter back to the Activity.
+This week introduces modern Android development using **Jetpack Compose**, the declarative UI toolkit for Android.
 
-Topics covered:
-- Creating a custom interface
-- Implementing the interface in Activity
-- Passing listener to Adapter
-- Handling item click events
-- Clean separation between UI and logic
+Official documentation:
+- Jetpack Compose overview  
+  https://developer.android.com/jetpack/compose
+
+- Compose mental model  
+  https://developer.android.com/jetpack/compose/mental-model
 
 ---
 
-### ToDo List Features Implemented
+## Project 1 — Student Profile App (Java + XML)
 
-- Display list of tasks
-- Add new tasks
-- Handle item click events
-- Dynamic UI updates
-- Structured adapter-based architecture
+Before learning Compose, we first built the Student Profile application using the traditional View system.
+
+### Features Implemented:
+- XML-based UI layout
+- EditText inputs for name and age
+- Button click handling
+- Manual UI updates using setText()
+- Manual visibility control using setVisibility()
+- findViewById() for view binding
+
+### Concepts Reinforced:
+- Imperative UI programming
+- Direct manipulation of views
+- Separation between XML and Java
+- Event listeners
+- Activity lifecycle basics
+
+This project demonstrates how UI is manually controlled step by step.
+
+---
+
+## Project 2 — Student Profile App (Jetpack Compose Version)
+
+ Then we rebuilt the exact same application using Jetpack Compose in Kotlin.
+
+### Features Implemented:
+- @Composable functions
+- Column layout
+- OutlinedTextField
+- Button composable
+- remember { mutableStateOf() }
+- Conditional UI rendering using if statements
+- Automatic recomposition
+
+### Concepts Introduced:
+- Declarative UI programming
+- UI = function of state
+- State-driven rendering
+- Recomposition
+- No XML
+- No findViewById()
+- No manual visibility control
+
+This project highlights the transition from imperative to declarative UI programming.
+
+---
+
+## Key Learning Outcome of Week 7
+
+ Understanding the difference between:
+
+**Traditional View System (Java + XML)**:
+- Imperative
+- Manual UI updates
+- Explicit view manipulation
+
+**Jetpack Compose (Kotlin)**:
+- Declarative
+- State-driven UI
+- Automatic recomposition
+
+This week marks the transition from classic Android development to modern Android architecture.
 
 ---
 
 ## How to Use This Repository
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
