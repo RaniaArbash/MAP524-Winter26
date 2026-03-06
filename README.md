@@ -18,6 +18,7 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 5 | RecyclerView and Interface Listeners (ToDo List App) |
 | Week 6 | MIDTERM TEST |
 | <span style="color:red;"><strong>Week 7</strong></span> | <span style="color:red;"><strong>Introduction to Jetpack Compose (Declarative UI)</strong></span> |
+| Week 8 | ViewModel and State Management in Jetpack Compose |
 
 ---
 
@@ -207,7 +208,7 @@ This project demonstrates how UI is manually controlled step by step.
 
 ## Project 2 — Student Profile App (Jetpack Compose Version)
 
- Then we rebuilt the exact same application using Jetpack Compose in Kotlin.
+Then we rebuilt the exact same application using Jetpack Compose in Kotlin.
 
 ### Features Implemented:
 - @Composable functions
@@ -231,21 +232,50 @@ This project highlights the transition from imperative to declarative UI program
 
 ---
 
-## Key Learning Outcome of Week 7
+## Week 8 — ViewModel and State Management in Jetpack Compose
 
- Understanding the difference between:
+This week focuses on **Jetpack Compose state management** using **ViewModel** and introduces building composables that share data.
 
-**Traditional View System (Java + XML)**:
-- Imperative
-- Manual UI updates
-- Explicit view manipulation
+### Topics Covered
 
-**Jetpack Compose (Kotlin)**:
-- Declarative
-- State-driven UI
-- Automatic recomposition
+- **ViewModel Setup**
+  - Creating the first ViewModel in a Jetpack Compose project
+  - Adding state variables for composables in the ViewModel
+  - Observing ViewModel state in composables
 
-This week marks the transition from classic Android development to modern Android architecture.
+- **Composable Functions**
+  - Counter composable
+    - Uses state from ViewModel to increment and display a count
+  - Login composable
+    - Accepts user input (username)
+    - Updates ViewModel state
+
+- **State Handling**
+  - Using `mutableStateOf()` in the ViewModel for shared state
+  - Local composable state using `remember { mutableStateOf() }` if needed
+  - Displaying login username in another composable via ViewModel
+
+- **Communication Between Composables**
+  - Sharing state through ViewModel to avoid direct composable coupling
+  - Updating UI automatically when state changes
+
+### Learning Outcomes
+
+By the end of Week 8, students will be able to:
+
+- Understand and implement a **ViewModel** in Jetpack Compose
+- Manage shared state between multiple composables
+- Use local state (`remember`) for composable-specific data
+- Build interactive composables like counters and login forms
+- Observe and react to state changes in composables seamlessly
+
+Official documentation:
+
+- ViewModel Overview  
+  https://developer.android.com/topic/libraries/architecture/viewmodel
+
+- State in Compose  
+  https://developer.android.com/jetpack/compose/state
 
 ---
 
