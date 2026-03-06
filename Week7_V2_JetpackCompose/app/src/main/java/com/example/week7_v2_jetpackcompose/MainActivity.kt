@@ -44,6 +44,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun studentProfile(){
+    var myname = ""
     var name by remember { mutableStateOf("") } // string state var
     var age by remember { mutableStateOf("") }// string state var
     var showProfile by remember { mutableStateOf(false ) } // bool state var
