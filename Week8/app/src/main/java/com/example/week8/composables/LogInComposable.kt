@@ -27,7 +27,7 @@ import com.example.week8.screens.FirstViewModel
 fun LogInComposable(vm : FirstViewModel = viewModel()) {
     var isLoggedIn = remember { mutableStateOf(false) }
     var userInput = remember { mutableStateOf("") }
-    Column(modifier = Modifier.fillMaxHeight(0.5f).fillMaxWidth(),
+    Column(modifier = Modifier.fillMaxHeight().fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(modifier = Modifier.height(40.dp))
@@ -48,10 +48,8 @@ fun LogInComposable(vm : FirstViewModel = viewModel()) {
         }) {
             Text("Log In")
         }
-
         if (isLoggedIn.value) {
             Text("Welcome ${vm.name}")
         }
-
     }
     }
