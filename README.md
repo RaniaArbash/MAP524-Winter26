@@ -17,8 +17,9 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 4 | Intents and Activity Lifecycle |
 | Week 5 | RecyclerView and Interface Listeners (ToDo List App) |
 | Week 6 | MIDTERM TEST |
-| <span style="color:red;"><strong>Week 7</strong></span> | <span style="color:red;"><strong>Introduction to Jetpack Compose (Declarative UI)</strong></span> |
+| Week 7 | Introduction to Jetpack Compose (Declarative UI) |
 | Week 8 | ViewModel and State Management in Jetpack Compose |
+| <span style="color:red;"><strong>Week 9</strong></span> | <span style="color:red;"><strong>Navigation and Scaffold in Jetpack Compose</strong></span> |
 
 ---
 
@@ -276,6 +277,56 @@ Official documentation:
 
 - State in Compose  
   https://developer.android.com/jetpack/compose/state
+
+---
+
+## Week 9 — Navigation and Scaffold in Jetpack Compose
+
+This week introduces **application structure and navigation** in Jetpack Compose using **Scaffold** and the **Navigation Component**.
+
+### Topics Covered
+
+- **Scaffold Layout**
+  - Using `Scaffold` to create the basic structure of an Android screen
+  - Adding common UI elements such as:
+    - TopAppBar
+    - FloatingActionButton
+    - Bottom Navigation
+  - Managing content padding within the Scaffold layout
+
+- **Navigation in Jetpack Compose**
+  - Setting up the Navigation dependency
+  - Creating a `NavController`
+  - Defining navigation routes
+  - Using `NavHost` to manage composable destinations
+
+- **Screen Navigation**
+  - Navigating between multiple screens
+  - Using `navController.navigate()`
+  - Handling the back stack with `popBackStack()`
+
+- **Organizing Screens**
+  - Structuring composable screens for navigation
+  - Managing routes using constants or sealed classes
+  - Reusing previously built composables as separate screens
+
+### Learning Outcomes
+
+By the end of Week 9, students will be able to:
+
+- Build structured Android apps using **Scaffold**
+- Implement navigation between multiple composable screens
+- Use **NavController** and **NavHost** to manage app navigation
+- Organize UI into reusable composable screens
+- Understand the navigation flow and back stack behavior in Android apps
+
+Official documentation:
+
+- Navigation in Compose  
+  https://developer.android.com/jetpack/compose/navigation
+
+- Scaffold Layout  
+  https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Scaffold
 
 ---
 
