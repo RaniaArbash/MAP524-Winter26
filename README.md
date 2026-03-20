@@ -19,7 +19,7 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 6 | MIDTERM TEST |
 | Week 7 | Introduction to Jetpack Compose (Declarative UI) |
 | Week 8 | ViewModel and State Management in Jetpack Compose |
-| <span style="color:red;"><strong>Week 9</strong></span> | <span style="color:red;"><strong>Navigation and Scaffold in Jetpack Compose</strong></span> |
+| <span style="color:red;"><strong>Week 9</strong></span> | <span style="color:red;"><strong>Navigation, Networking, and Data Layer</strong></span> |
 
 ---
 
@@ -173,166 +173,73 @@ Official documentation:
 
 # Week 7 — Introduction to Jetpack Compose (Modern Android UI)
 
-This week introduces modern Android development using **Jetpack Compose**, the declarative UI toolkit for Android.
+This week introduces modern Android development using Jetpack Compose.
 
 Official documentation:
-- Jetpack Compose overview  
-  https://developer.android.com/jetpack/compose
-
-- Compose mental model  
-  https://developer.android.com/jetpack/compose/mental-model
-
----
-
-## Project 1 — Student Profile App (Java + XML)
-
-Before learning Compose, we first built the Student Profile application using the traditional View system.
-
-### Features Implemented:
-- XML-based UI layout
-- EditText inputs for name and age
-- Button click handling
-- Manual UI updates using setText()
-- Manual visibility control using setVisibility()
-- findViewById() for view binding
-
-### Concepts Reinforced:
-- Imperative UI programming
-- Direct manipulation of views
-- Separation between XML and Java
-- Event listeners
-- Activity lifecycle basics
-
-This project demonstrates how UI is manually controlled step by step.
-
----
-
-## Project 2 — Student Profile App (Jetpack Compose Version)
-
-Then we rebuilt the exact same application using Jetpack Compose in Kotlin.
-
-### Features Implemented:
-- @Composable functions
-- Column layout
-- OutlinedTextField
-- Button composable
-- remember { mutableStateOf() }
-- Conditional UI rendering using if statements
-- Automatic recomposition
-
-### Concepts Introduced:
-- Declarative UI programming
-- UI = function of state
-- State-driven rendering
-- Recomposition
-- No XML
-- No findViewById()
-- No manual visibility control
-
-This project highlights the transition from imperative to declarative UI programming.
+- https://developer.android.com/jetpack/compose
+- https://developer.android.com/jetpack/compose/mental-model
 
 ---
 
 ## Week 8 — ViewModel and State Management in Jetpack Compose
 
-This week focuses on **Jetpack Compose state management** using **ViewModel** and introduces building composables that share data.
-
-### Topics Covered
-
-- **ViewModel Setup**
-  - Creating the first ViewModel in a Jetpack Compose project
-  - Adding state variables for composables in the ViewModel
-  - Observing ViewModel state in composables
-
-- **Composable Functions**
-  - Counter composable
-    - Uses state from ViewModel to increment and display a count
-  - Login composable
-    - Accepts user input (username)
-    - Updates ViewModel state
-
-- **State Handling**
-  - Using `mutableStateOf()` in the ViewModel for shared state
-  - Local composable state using `remember { mutableStateOf() }` if needed
-  - Displaying login username in another composable via ViewModel
-
-- **Communication Between Composables**
-  - Sharing state through ViewModel to avoid direct composable coupling
-  - Updating UI automatically when state changes
-
-### Learning Outcomes
-
-By the end of Week 8, students will be able to:
-
-- Understand and implement a **ViewModel** in Jetpack Compose
-- Manage shared state between multiple composables
-- Use local state (`remember`) for composable-specific data
-- Build interactive composables like counters and login forms
-- Observe and react to state changes in composables seamlessly
+Topics covered:
+- ViewModel setup
+- State management using `mutableStateOf`
+- Sharing data between composables
+- Reactive UI updates
 
 Official documentation:
-
-- ViewModel Overview  
-  https://developer.android.com/topic/libraries/architecture/viewmodel
-
-- State in Compose  
-  https://developer.android.com/jetpack/compose/state
+- https://developer.android.com/topic/libraries/architecture/viewmodel
+- https://developer.android.com/jetpack/compose/state
 
 ---
 
-## Week 9 — Navigation and Scaffold in Jetpack Compose
+## Week 9 — Navigation, Networking, and Data Layer
 
-This week introduces **application structure and navigation** in Jetpack Compose using **Scaffold** and the **Navigation Component**.
-
-### Topics Covered
-
-- **Scaffold Layout**
-  - Using `Scaffold` to create the basic structure of an Android screen
-  - Adding common UI elements such as:
-    - TopAppBar
-    - FloatingActionButton
-    - Bottom Navigation
-  - Managing content padding within the Scaffold layout
-
-- **Navigation in Jetpack Compose**
-  - Setting up the Navigation dependency
-  - Creating a `NavController`
-  - Defining navigation routes
-  - Using `NavHost` to manage composable destinations
-
-- **Screen Navigation**
-  - Navigating between multiple screens
-  - Using `navController.navigate()`
-  - Handling the back stack with `popBackStack()`
-
-- **Organizing Screens**
-  - Structuring composable screens for navigation
-  - Managing routes using constants or sealed classes
-  - Reusing previously built composables as separate screens
-
-### Learning Outcomes
-
-By the end of Week 9, students will be able to:
-
-- Build structured Android apps using **Scaffold**
-- Implement navigation between multiple composable screens
-- Use **NavController** and **NavHost** to manage app navigation
-- Organize UI into reusable composable screens
-- Understand the navigation flow and back stack behavior in Android apps
-
-Official documentation:
-
-- Navigation in Compose  
-  https://developer.android.com/jetpack/compose/navigation
-
-- Scaffold Layout  
-  https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Scaffold
+This week focuses on building **real-world Android apps** by combining navigation, networking, and clean architecture.
 
 ---
 
-## How to Use This Repository
+### 1️⃣ Navigation and Scaffold
 
-1. Clone the repository:
+- Scaffold layout structure
+- TopBar, BottomBar, FAB
+- Navigation using NavController
+- NavHost and composable destinations
+- Back stack handling
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
+---
+
+### 2️⃣ Networking in Android
+
+Networking allows your app to **fetch data from APIs (servers)**.
+
+Examples:
+- Fetching users
+- Loading products
+- Displaying posts
+
+---
+
+### 3️⃣ Retrofit Library
+
+**Retrofit** is a popular library used to handle networking in Android easily.
+
+Official documentation:  
+https://square.github.io/retrofit/
+
+#### Why Retrofit?
+
+- Simple API calls
+- Converts JSON to Kotlin objects automatically
+- Clean and readable code
+- Works well with coroutines
+
+#### Example:
+
+```kotlin
+interface ApiService {
+    @GET("users")
+    suspend fun getUsers(): List<User>
+}
