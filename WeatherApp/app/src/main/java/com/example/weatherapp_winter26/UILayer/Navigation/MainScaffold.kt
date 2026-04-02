@@ -3,6 +3,7 @@ package com.example.weatherapp_winter26.UILayer.Navigation
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
+import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Place
@@ -22,6 +23,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.weatherapp_winter26.UILayer.LocationUILayer.GoogleMapScreen
+import com.example.weatherapp_winter26.UILayer.LocationUILayer.WeatherInLocationScreen
 import com.example.weatherapp_winter26.UILayer.SearchUILayer.SearchScreen
 import com.example.weatherapp_winter26.UILayer.WeatherUILayer.WeatherScreen
 
@@ -47,6 +50,18 @@ fun MainScaffold() {
                     icon = { Icon(Icons.Filled.Search, contentDescription = "Search") },
                     label = { Text("City Search") }
                 )
+                NavigationBarItem(
+                    selected = currentRoute == ScreenRoutes.weatherInLocation,
+                    onClick = { navController.navigate(ScreenRoutes.weatherInLocation) },
+                    icon = { Icon(Icons.Filled.Place, contentDescription = "Location") },
+                    label = { Text("Location") }
+                )
+                NavigationBarItem(
+                    selected = currentRoute == ScreenRoutes.Map,
+                    onClick = { navController.navigate(ScreenRoutes.Map) },
+                    icon = { Icon(Icons.Filled.AddCircle, contentDescription = "Map") },
+                    label = { Text("Map") }
+                )
             }
         }
     ) { innerPadding ->
@@ -70,6 +85,13 @@ fun AppNavHost(navController: NavHostController,
         composable(ScreenRoutes.CitySearch) {
             CitySearchStack()
         }
+        composable(ScreenRoutes.weatherInLocation) {
+            WeatherInLocationScreen()
+        }
+        composable(ScreenRoutes.Map) {
+            GoogleMapScreen()
+        }
+
     }
 }
 
