@@ -20,6 +20,7 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 7 | Introduction to Jetpack Compose (Declarative UI) |
 | Week 8 | ViewModel and State Management in Jetpack Compose |
 | <span style="color:red;"><strong>Week 9</strong></span> | <span style="color:red;"><strong>Navigation, Networking, and Data Layer</strong></span> |
+| <span style="color:green;"><strong>Week 10</strong></span> | <span style="color:green;"><strong>Location and Google Maps Integration</strong></span> |
 
 ---
 
@@ -215,31 +216,55 @@ This week focuses on building **real-world Android apps** by combining navigatio
 
 Networking allows your app to **fetch data from APIs (servers)**.
 
-Examples:
-- Fetching users
-- Loading products
-- Displaying posts
-
 ---
 
 ### 3️⃣ Retrofit Library
 
-**Retrofit** is a popular library used to handle networking in Android easily.
-
 Official documentation:  
 https://square.github.io/retrofit/
 
-#### Why Retrofit?
+---
 
-- Simple API calls
-- Converts JSON to Kotlin objects automatically
-- Clean and readable code
-- Works well with coroutines
+# Week 10 — Location and Google Maps Integration
 
-#### Example:
+This week focuses on building **location-based Android applications**.
 
-```kotlin
-interface ApiService {
-    @GET("users")
-    suspend fun getUsers(): List<User>
-}
+---
+
+## 📍 Location Services
+
+Topics covered:
+- Requesting location permissions
+- Using FusedLocationProviderClient
+- Getting user current location
+- Location updates
+
+---
+
+## 🗺️ Google Maps
+
+Topics covered:
+- Adding Google Maps to your app
+- API key setup
+- Displaying map fragment
+- Adding markers
+- Camera movement and zoom
+
+---
+
+## 📚 Resources
+
+- https://developer.android.com/training/location  
+- https://developer.android.com/training/location/request-updates  
+- https://developers.google.com/maps/documentation/android-sdk/overview  
+- https://developers.google.com/maps/documentation/android-sdk/maps-compose  
+
+---
+
+## 💡 Notes
+
+- Always handle runtime permissions carefully  
+- Optimize for battery usage  
+- Keep API keys secure  
+
+---
