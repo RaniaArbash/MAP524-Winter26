@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class SearchViewModel : ViewModel(){
     private val repo = SearchRepo() // access to data layer
 
-    var cityList = listOf("Toronto, ON, Canada", "Rome, Italy")
+    var cityList = emptyList<String>()
 
     private val _cities = MutableStateFlow<List<String>>(cityList);
     var cities : MutableStateFlow<List<String>> = _cities

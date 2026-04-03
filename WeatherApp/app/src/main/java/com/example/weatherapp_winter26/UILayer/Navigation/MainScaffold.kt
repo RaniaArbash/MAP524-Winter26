@@ -25,6 +25,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.weatherapp_winter26.UILayer.LocationUILayer.GoogleMapScreen
 import com.example.weatherapp_winter26.UILayer.LocationUILayer.WeatherInLocationScreen
+import com.example.weatherapp_winter26.UILayer.RoomDBUILayer.FavCityScreen
 import com.example.weatherapp_winter26.UILayer.SearchUILayer.SearchScreen
 import com.example.weatherapp_winter26.UILayer.WeatherUILayer.WeatherScreen
 
@@ -62,6 +63,12 @@ fun MainScaffold() {
                     icon = { Icon(Icons.Filled.AddCircle, contentDescription = "Map") },
                     label = { Text("Map") }
                 )
+                NavigationBarItem(
+                    selected = currentRoute == ScreenRoutes.Fav,
+                    onClick = { navController.navigate(ScreenRoutes.Fav) },
+                    icon = { Icon(Icons.Filled.Favorite, contentDescription = "Fav") },
+                    label = { Text("Favorite Cities") }
+                )
             }
         }
     ) { innerPadding ->
@@ -90,6 +97,9 @@ fun AppNavHost(navController: NavHostController,
         }
         composable(ScreenRoutes.Map) {
             GoogleMapScreen()
+        }
+        composable(ScreenRoutes.Fav) {
+            FavCityScreen()
         }
 
     }

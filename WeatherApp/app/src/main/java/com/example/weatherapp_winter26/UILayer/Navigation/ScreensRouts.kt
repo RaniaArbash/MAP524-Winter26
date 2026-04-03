@@ -4,6 +4,7 @@ object ScreenRoutes {
     const val CitySearch = "CitySearchStack"
     const val weatherInLocation = "WeatherInLocation"
     const val Map = "GoogleMap"
+    const val Fav = "Favorite Cities"
 
 
 }
