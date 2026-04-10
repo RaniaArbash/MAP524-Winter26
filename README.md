@@ -19,8 +19,9 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 6 | MIDTERM TEST |
 | Week 7 | Introduction to Jetpack Compose (Declarative UI) |
 | Week 8 | ViewModel and State Management in Jetpack Compose |
-| <span style="color:red;"><strong>Week 9</strong></span> | <span style="color:red;"><strong>Navigation, Networking, and Data Layer</strong></span> |
-| <span style="color:green;"><strong>Week 10</strong></span> | <span style="color:green;"><strong>Location and Google Maps Integration</strong></span> |
+| Week 9 | Navigation, Networking, and Data Layer |
+| Week 10 | Location and Google Maps Integration |
+| <span style="color:blue;"><strong>Week 11</strong></span> | <span style="color:blue;"><strong>Room Database and Local Persistence</strong></span> |
 
 ---
 
@@ -30,8 +31,6 @@ This repository currently includes projects aligned with specific weeks of the c
 
 ## Week 1 — Android Fundamentals
 
-This project introduces the basics of Android development and Android Studio.
-
 Topics covered:
 - Android Studio overview
 - Project structure
@@ -40,188 +39,87 @@ Topics covered:
 - Basic user interaction
 
 Official documentation:
-- Activities overview  
-  https://developer.android.com/guide/components/activities/intro-activities
+- https://developer.android.com/guide/components/activities/intro-activities
 
 ---
 
 ## Week 2 — Android Layouts and Resources
 
-This project focuses on building user interfaces and working with Android resources using the traditional View system.
-
-### Layouts Covered
-
-- LinearLayout  
-  https://developer.android.com/develop/ui/views/layout/linear
-
-- RelativeLayout  
-  https://developer.android.com/develop/ui/views/layout/relative
-
-- ConstraintLayout  
-  https://developer.android.com/develop/ui/views/layout/constraint-layout
-
-- Declaring layouts in XML  
-  https://developer.android.com/develop/ui/views/layout/declaring-layout
-
-### Android Resources
-
 Topics covered:
+- Layouts (Linear, Relative, Constraint)
+- XML UI design
 - String resources
-- Supporting multiple languages (localization)
-- Supporting landscape layouts
+- Localization
 
-Official documentation:
-- Providing resources  
-  https://developer.android.com/guide/topics/resources/providing-resources
-
-- Supporting multiple languages  
-  https://developer.android.com/training/basics/supporting-devices/languages
+Resources:
+- https://developer.android.com/develop/ui/views/layout/linear  
+- https://developer.android.com/develop/ui/views/layout/constraint-layout  
+- https://developer.android.com/guide/topics/resources/providing-resources  
 
 ---
 
 ## Week 3 — Adapters and List-Based Views
 
-This project introduces list-based UI components in Android and explains how data is connected to views using adapters.
-
 Topics covered:
-- Adapter concept in Android
-- ListView basics
-- ArrayAdapter usage
-- BaseAdapter for custom list items
-- View recycling and performance basics
+- ListView
+- ArrayAdapter & BaseAdapter
+- View recycling
 
-Official documentation and resources:
-- ListView overview  
-  https://developer.android.com/reference/android/widget/ListView
-
-- ArrayAdapter  
-  https://developer.android.com/reference/android/widget/ArrayAdapter
-
-- BaseAdapter  
-  https://developer.android.com/reference/android/widget/BaseAdapter
-
-- Adapters and AdapterViews  
-  https://developer.android.com/reference/android/widget/Adapter
+Resources:
+- https://developer.android.com/reference/android/widget/ListView  
+- https://developer.android.com/reference/android/widget/ArrayAdapter  
 
 ---
 
 ## Week 4 — Intents and Activity Lifecycle
 
-This project focuses on navigation between activities, communication using intents, and understanding how Android manages activity states.
+Topics covered:
+- Intents and navigation
+- Activity lifecycle
+- Camera usage
 
-### Intents in Android
+Resources:
+- https://developer.android.com/guide/components/intents-filters  
+- https://developer.android.com/guide/components/activities/activity-lifecycle  
+
+---
+
+## Week 5 — RecyclerView (ToDo App)
 
 Topics covered:
-- Explicit intents
-- Passing data between activities
-- Retrieving intent extras
+- RecyclerView
+- Adapter & ViewHolder
+- Click listeners
 
-Official documentation:
-- Intents and Intent Filters  
-  https://developer.android.com/guide/components/intents-filters
+Resources:
+- https://developer.android.com/guide/topics/ui/layout/recyclerview  
 
 ---
 
-### Activity Lifecycle
+## Week 7 — Jetpack Compose Basics
+
+Resources:
+- https://developer.android.com/jetpack/compose  
+
+---
+
+## Week 8 — ViewModel & State
+
+Resources:
+- https://developer.android.com/topic/libraries/architecture/viewmodel  
+- https://developer.android.com/jetpack/compose/state  
+
+---
+
+## Week 9 — Navigation, Networking, Data Layer
 
 Topics covered:
-- Activity lifecycle overview
-- onCreate(), onStart(), onResume()
-- onPause(), onStop(), onDestroy()
-- Introduction to configuration changes
+- Navigation (NavController)
+- API calls
+- Retrofit
 
-Official documentation:
-- Activity lifecycle  
-  https://developer.android.com/guide/components/activities/activity-lifecycle
-
----
-
-### Camera and Media Capture
-
-Topics covered:
-- Opening the camera using an intent
-- Capturing images
-- Handling returned image data
-- Required permissions (overview)
-
-Official documentation:
-- Camera via intent  
-  https://developer.android.com/training/camera/photobasics
-
----
-
-## Week 5 — RecyclerView and Interface Listeners  
-### Project: ToDo List Application
-
-Students built a complete ToDo List application using RecyclerView.
-
-Topics covered:
-- RecyclerView setup
-- LayoutManager (LinearLayoutManager)
-- Custom Adapter
-- ViewHolder pattern
-- Interface listeners for item click handling
-- Dynamic UI updates
-
-Official documentation:
-- RecyclerView overview  
-  https://developer.android.com/guide/topics/ui/layout/recyclerview
-
-- RecyclerView.Adapter  
-  https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter
-
----
-
-# Week 7 — Introduction to Jetpack Compose (Modern Android UI)
-
-This week introduces modern Android development using Jetpack Compose.
-
-Official documentation:
-- https://developer.android.com/jetpack/compose
-- https://developer.android.com/jetpack/compose/mental-model
-
----
-
-## Week 8 — ViewModel and State Management in Jetpack Compose
-
-Topics covered:
-- ViewModel setup
-- State management using `mutableStateOf`
-- Sharing data between composables
-- Reactive UI updates
-
-Official documentation:
-- https://developer.android.com/topic/libraries/architecture/viewmodel
-- https://developer.android.com/jetpack/compose/state
-
----
-
-## Week 9 — Navigation, Networking, and Data Layer
-
-This week focuses on building **real-world Android apps** by combining navigation, networking, and clean architecture.
-
----
-
-### 1️⃣ Navigation and Scaffold
-
-- Scaffold layout structure
-- TopBar, BottomBar, FAB
-- Navigation using NavController
-- NavHost and composable destinations
-- Back stack handling
-
----
-
-### 2️⃣ Networking in Android
-
-Networking allows your app to **fetch data from APIs (servers)**.
-
----
-
-### 3️⃣ Retrofit Library
-
-Official documentation:  
-https://square.github.io/retrofit/
+Resources:
+- https://square.github.io/retrofit/  
 
 ---
 
@@ -231,28 +129,27 @@ This week focuses on building **location-based Android applications**.
 
 ---
 
-## 📍 Location Services
+## Location Services
 
 Topics covered:
-- Requesting location permissions
-- Using FusedLocationProviderClient
-- Getting user current location
+- Runtime permissions (location)
+- FusedLocationProviderClient
+- Getting current location
 - Location updates
 
 ---
 
-## 🗺️ Google Maps
+## Google Maps
 
 Topics covered:
-- Adding Google Maps to your app
-- API key setup
-- Displaying map fragment
+- Google Maps API setup
+- Displaying map
 - Adding markers
-- Camera movement and zoom
+- Camera movement
 
 ---
 
-## 📚 Resources
+## Resources
 
 - https://developer.android.com/training/location  
 - https://developer.android.com/training/location/request-updates  
@@ -261,10 +158,61 @@ Topics covered:
 
 ---
 
-## 💡 Notes
+# Week 11 — Room Database and Local Persistence
 
-- Always handle runtime permissions carefully  
-- Optimize for battery usage  
-- Keep API keys secure  
+This week focuses on **storing and managing data locally** using Room Database.
+
+---
+
+##  What was added in class
+
+In this week, we **enhanced our existing apps** by integrating **Room Database** to replace temporary or in-memory data storage.
+
+### Updates done:
+- Converted app data storage to Room DB
+- Persisted user data locally
+- Connected Room with ViewModel
+- Used LiveData / State for reactive UI updates
+
+---
+
+##  Room Database Concepts
+
+Topics covered:
+- Entity (table representation)
+- DAO (Data Access Object)
+- Database class
+- CRUD operations (Insert, Update, Delete, Query)
+- Integration with ViewModel
+
+---
+
+## Architecture Integration
+
+- Room + ViewModel + UI
+- Clean separation of concerns
+- Reactive updates using LiveData / Compose State
+
+---
+
+## Resources
+
+Official documentation:
+- https://developer.android.com/training/data-storage/room  
+
+Codelabs:
+- https://developer.android.com/codelabs/android-room-with-a-view  
+
+Additional guides:
+- https://developer.android.com/topic/libraries/architecture  
+
+---
+
+##  Notes
+
+- Room is an abstraction over SQLite
+- Always run database operations off the main thread
+- Use ViewModel to survive configuration changes
+- Combine Room with State (Compose) for reactive UI
 
 ---
