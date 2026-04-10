@@ -23,6 +23,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.weatherapp_winter26.UILayer.CloudDBUILayer.CloudDBScreen
 import com.example.weatherapp_winter26.UILayer.LocationUILayer.GoogleMapScreen
 import com.example.weatherapp_winter26.UILayer.LocationUILayer.WeatherInLocationScreen
 import com.example.weatherapp_winter26.UILayer.RoomDBUILayer.FavCityScreen
@@ -69,6 +70,12 @@ fun MainScaffold() {
                     icon = { Icon(Icons.Filled.Favorite, contentDescription = "Fav") },
                     label = { Text("Favorite Cities") }
                 )
+                NavigationBarItem(
+                    selected = currentRoute == ScreenRoutes.Cloud,
+                    onClick = { navController.navigate(ScreenRoutes.Cloud) },
+                    icon = { Icon(Icons.Filled.Favorite, contentDescription = "CloudFav") },
+                    label = { Text("Cloud DB") }
+                )
             }
         }
     ) { innerPadding ->
@@ -101,7 +108,9 @@ fun AppNavHost(navController: NavHostController,
         composable(ScreenRoutes.Fav) {
             FavCityScreen()
         }
-
+        composable(ScreenRoutes.Cloud) {
+            CloudDBScreen()
+        }
     }
 }
 

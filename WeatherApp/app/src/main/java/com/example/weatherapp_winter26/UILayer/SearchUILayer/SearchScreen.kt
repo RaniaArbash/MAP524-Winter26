@@ -21,12 +21,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.weatherapp_winter26.UILayer.CloudDBUILayer.CloudDBViewModel
 import com.example.weatherapp_winter26.UILayer.RoomDBUILayer.RoomDBViewModel
 
 @Composable
 fun SearchScreen(navController: NavController,
                  vm : SearchViewModel = viewModel(),
-                 cityVM: RoomDBViewModel = viewModel()) {
+                 cityVM: RoomDBViewModel = viewModel(),
+                 cloudVM: CloudDBViewModel = viewModel()
+                 ) {
 
     var showAlert = remember { mutableStateOf(false) }
     var selectedCity: String = remember { mutableStateOf("").toString() }
@@ -69,6 +72,7 @@ fun SearchScreen(navController: NavController,
                         okButton = "Yes, Save",
                         noButton = "NO, Don't Save", onSave = {
                         cityVM.addNewCity(selectedCity,0.5,3.2)
+                        cloudVM.saveCityToCloudDB(selectedCity,0.5,0.6 )
 
                             navController.navigate("weather/${selectedCity}")
                             showAlert.value = false

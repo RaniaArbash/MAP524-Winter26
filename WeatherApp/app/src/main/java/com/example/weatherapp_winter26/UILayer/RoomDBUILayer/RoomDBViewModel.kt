@@ -17,7 +17,7 @@ class RoomDBViewModel(application: Application): AndroidViewModel(application) {
         val dao = CityDatabase.getDB(application).cityDao()
         repository = CityRepo(dao)
     }
-    
+
     private var _favoritesCities = MutableStateFlow<List<City>?>(emptyList())
     val favoritesCities: MutableStateFlow<List<City>??> = _favoritesCities
 

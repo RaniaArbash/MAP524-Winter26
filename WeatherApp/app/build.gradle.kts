@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt") apply true
+    id("com.google.gms.google-services")
+
 }
 
 android {
@@ -44,6 +46,12 @@ android {
 
 dependencies {
     val room_version = "2.8.4"
+
+    // firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
+    //firestore
+    implementation("com.google.firebase:firebase-firestore")
+
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")

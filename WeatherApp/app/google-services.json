@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165208919734",
+    "project_id": "citiesproject-9f05f",
+    "storage_bucket": "citiesproject-9f05f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165208919734:android:9fda09d1e69036878da017",
+        "android_client_info": {
+          "package_name": "com.example.weatherapp_winter26"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBna7OFTCSYo9ZeAY69xgxBsoh3oDKdwzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

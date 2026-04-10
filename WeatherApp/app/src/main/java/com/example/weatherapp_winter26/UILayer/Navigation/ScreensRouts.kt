@@ -6,5 +6,6 @@ object ScreenRoutes {
     const val Map = "GoogleMap"
     const val Fav = "Favorite Cities"
 
+    const val Cloud = "Cloud DB"
 
 }
